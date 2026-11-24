@@ -407,6 +407,11 @@ footer a:hover{color:#fff}
   .btn-primary,.btn-ghost{justify-content:center;width:100%;box-sizing:border-box}
   .hero-trust{gap:.75rem;flex-direction:column;align-items:flex-start}
 }
+.ferror{display:none;margin-top:1rem;padding:1rem 1.25rem;background:#fdf1f2;border:1.5px solid var(--red);border-radius:.875rem;color:var(--text);font-size:.9375rem;line-height:1.5}
+.ferror strong{display:block;color:var(--red-dark);margin-bottom:.25rem}
+.ferror .ferror-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
+.ferror .ferror-actions a{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:var(--radius-pill);font-weight:700;font-size:.875rem;text-decoration:none;border:1.5px solid var(--red);color:var(--red);background:#fff}
+.ferror .ferror-actions a.primary{background:var(--red);color:#fff}
 </style>
 </head>
 <body>
@@ -764,26 +769,79 @@ function showSuccess() {
   s.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-/* ── HILFSFUNKTION: Formular absenden via Apps Script ── */
-function sendForm(params, btn, successCallback) {
-  var origHTML = btn.innerHTML;
-  btn.disabled = true;
-  btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Wird gesendet\u2026';
+/* ── HILFSFUNKTION: Formular absenden via Apps Script ──
+   Erfolg nur, wenn das Skript ausdrücklich {"result":"success"} liefert.
+   Alles andere (Netzfehler, Zeitüberschreitung, unlesbare Antwort) zeigt
+   eine sichtbare Fehlermeldung mit Telefon und vorbefüllter E-Mail. */
+var FORM_TIMEOUT_MS = 20000;
+var FALLBACK_TEL = '0620496220';
+var FALLBACK_TEL_LABEL = '06204 / 9622-0';
+var FALLBACK_MAIL = 'mail@te-printline.de';
 
-  fetch(WEBAPP_URL, { method: 'POST', body: params })
-    .then(function(response) { return response.json(); })
+function hideFormError(form) {
+  var box = form.querySelector('.ferror');
+  if (box) { box.style.display = 'none'; }
+}
+
+function showFormError(form, mailSubject, mailBody) {
+  var box = form.querySelector('.ferror');
+  if (!box) {
+    box = document.createElement('div');
+    box.className = 'ferror';
+    box.setAttribute('role', 'alert');
+    form.insertBefore(box, form.querySelector('button[type="submit"]'));
+  }
+  var mailto = 'mailto:' + FALLBACK_MAIL +
+    '?subject=' + encodeURIComponent(mailSubject) +
+    '&body=' + encodeURIComponent(mailBody);
+  box.innerHTML =
+    '<strong>Ihre Anfrage konnte leider nicht übermittelt werden.</strong>' +
+    'Ihre Eingaben sind noch da. Bitte versuchen Sie es erneut oder erreichen Sie uns direkt:' +
+    '<div class="ferror-actions">' +
+      '<a class="primary" href="tel:' + FALLBACK_TEL + '">Anrufen: ' + FALLBACK_TEL_LABEL + '</a>' +
+      '<a class="ferror-mail" href="#">Per E-Mail senden</a>' +
+    '</div>';
+  box.querySelector('.ferror-mail').setAttribute('href', mailto);
+  box.style.display = 'block';
+  box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function sendForm(params, btn, successCallback, mailSubject, mailBody) {
+  var form = btn.form;
+  var origHTML = btn.innerHTML;
+  hideFormError(form);
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Wird gesendet…';
+
+  function fail() {
+    btn.disabled = false;
+    btn.innerHTML = origHTML;
+    showFormError(form, mailSubject, mailBody);
+  }
+
+  var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+  var timer = setTimeout(function() { if (controller) { controller.abort(); } }, FORM_TIMEOUT_MS);
+  var opts = { method: 'POST', body: params };
+  if (controller) { opts.signal = controller.signal; }
+
+  fetch(WEBAPP_URL, opts)
+    .then(function(response) {
+      if (!response.ok) { throw new Error('HTTP ' + response.status); }
+      return response.json();
+    })
     .then(function(data) {
-      if (data.result === 'success') {
-        successCallback();
-      } else {
-        alert('Fehler beim Senden. Bitte rufen Sie uns direkt an:\n06204 / 9622-0');
+      clearTimeout(timer);
+      if (data && data.result === 'success') {
         btn.disabled = false;
         btn.innerHTML = origHTML;
+        successCallback();
+      } else {
+        fail();
       }
     })
     .catch(function() {
-      /* Apps Script leitet intern um – bei Catch trotzdem Erfolg zeigen */
-      successCallback();
+      clearTimeout(timer);
+      fail();
     });
 }
 
@@ -804,7 +862,10 @@ function submitRueckruf(e) {
   params.append('zeit',   zeit);
   params.append('quelle', 'te-postbox.de – Über uns – Rückruf');
 
-  sendForm(params, btn, showSuccess);
+  sendForm(params, btn, showSuccess,
+    'Rückrufwunsch über te-postbox.de',
+    'Bitte rufen Sie mich zurück.\n\nName: ' + name + '\nUnternehmen: ' + (firma || '-') +
+    '\nTelefon: ' + tel + '\nWunschzeit: ' + zeit);
 }
 
 /* ── NACHRICHT FORMULAR ── */
@@ -824,7 +885,9 @@ function submitNachricht(e) {
   params.append('text',   text);
   params.append('quelle', 'te-postbox.de – Über uns – Nachricht');
 
-  sendForm(params, btn, showSuccess);
+  sendForm(params, btn, showSuccess,
+    'Anfrage über te-postbox.de',
+    text + '\n\nName: ' + name + '\nUnternehmen: ' + (firma || '-') + '\nE-Mail: ' + email);
 }
 </script>
 
