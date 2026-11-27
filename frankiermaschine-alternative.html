@@ -654,6 +654,14 @@ nav{gap:1.5rem}
 /* Bild */
 .pic{max-width:960px;margin:2.75rem auto 0}
 .pic img{width:100%;height:auto;border-radius:var(--radius-card);border:1.5px solid var(--gray-mid);background:#f6f4f7}
+
+/* ── ZEILENUMBRÜCHE (auf allen Seiten gleich) ── */
+h1,h2,h3,h4,summary,blockquote,.hero-eyebrow,.sec-tag,.sec-h,.faq-question,.glance b,.topics b{text-wrap:balance}
+p,li,dd,td,.hero-sub,.sec-sub,.fa-lead,.faq-answer,.glance span,.topics span,.tldr{text-wrap:pretty}
+.fa-faq summary,summary{display:block}
+.fa-faq summary{position:relative;padding-right:1.75rem}
+.fa-faq summary::after{float:none;position:absolute;right:0;top:0}
+a.btn-primary,a.btn-ghost-fa,.btn-primary,.btn-ghost-fa{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -697,7 +705,7 @@ nav{gap:1.5rem}
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-      06204 / 9622-0
+      06204&nbsp;/&nbsp;9622-0
     </a>
     <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="nav-cta" target="_blank">
       Jetzt testen
@@ -725,7 +733,7 @@ nav{gap:1.5rem}
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-    06204 / 9622-0
+    06204&nbsp;/&nbsp;9622-0
   </a>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="m-cta" target="_blank">
     Jetzt testen
@@ -740,7 +748,7 @@ nav{gap:1.5rem}
     <h1>Briefe versenden,<br><em>ohne eigenes Gerät.</em></h1>
     <p class="hero-sub">Leasing läuft aus, es kommt weniger Post oder das Frankieren kostet zu viel Zeit? Mit der epostbox verschicken Sie Ihre Briefe direkt vom Computer. Hier lesen Sie, was der Wechsel kostet, was mit Ihren Verträgen passiert und wie er abläuft.</p>
     <div class="hero-ctas">
-      <a href="tel:0620496220" class="btn-primary">Beratung: 06204 / 9622-0</a>
+      <a href="tel:0620496220" class="btn-primary">Beratung: 06204&nbsp;/&nbsp;9622-0</a>
       <a href="#kosten" class="btn-ghost-fa">Kosten vergleichen</a>
     </div>
   </div>
@@ -793,7 +801,7 @@ nav{gap:1.5rem}
   <div class="sec-in">
     <div class="sec-tag">Kosten im Vergleich</div>
     <h2 class="sec-h">Was Sie zahlen und was wegfällt</h2>
-    <p class="fa-lead">Bei der epostbox ist im Preis pro Brief schon alles drin: <strong>Druck, Papier, Umschlag, Kuvertieren und Porto.</strong> Dazu kommt eine monatliche Grundgebühr von 9,90 € zzgl. MwSt. Alles, was eine Frankiermaschine sonst kostet, fällt weg.</p>
+    <p class="fa-lead">Bei der epostbox ist im Preis pro Brief schon alles drin: <strong>Druck, Papier, Umschlag, Kuvertieren und Porto.</strong> Dazu kommt eine monatliche Grundgebühr von 9,90&nbsp;€ zzgl.&nbsp;MwSt. Alles, was eine Frankiermaschine sonst kostet, fällt weg.</p>
     <table class="fa-table">
       <thead><tr><th>Kostenpunkt</th><th class="num">epostbox</th><th class="num">Frankiermaschine</th></tr></thead>
       <tbody>
@@ -805,7 +813,7 @@ nav{gap:1.5rem}
         <tr><td>Abrechnung</td><td class="num">Rechnung im Nachhinein</td><td class="num">Porto im Voraus</td></tr>
       </tbody>
     </table>
-    <p class="fa-note">Die Deutsche Post passt zum 1. Januar 2027 das Porto an. Die aktuellen Preise je Brief und eine Rechnung mit Ihrer Versandmenge bekommen Sie von uns: 06204 / 9622-0.</p>
+    <p class="fa-note">Die Deutsche Post passt zum 1.&nbsp;Januar 2027 das Porto an. Die aktuellen Preise je Brief und eine Rechnung mit Ihrer Versandmenge bekommen Sie von uns: 06204&nbsp;/&nbsp;9622-0.</p>
   </div>
 </section>
 
@@ -856,7 +864,7 @@ nav{gap:1.5rem}
       <div class="wert">
         <div class="wert-icon">2</div>
         <h3>epostbox parallel testen</h3>
-        <p>Sie starten mit 5 € Startguthaben, ohne Vertragslaufzeit. Die Frankiermaschine läuft so lange weiter, wie Sie sie brauchen.</p>
+        <p>Sie starten mit 5&nbsp;€ Startguthaben, ohne Vertragslaufzeit. Die Frankiermaschine läuft so lange weiter, wie Sie sie brauchen.</p>
       </div>
       <div class="wert">
         <div class="wert-icon">3</div>
@@ -877,9 +885,9 @@ nav{gap:1.5rem}
   <div class="sec-in">
     <div class="sec-tag">Kein Entweder-oder</div>
     <h2 class="sec-h">Frankiermaschine behalten? Geht auch.</h2>
-    <p class="fa-lead">Viele Kunden lassen Rechnungen, Mahnungen und Serienbriefe über die epostbox laufen und frankieren nur noch Sonderfälle selbst. Wer die Maschine ganz abgibt und trotzdem Briefmarken oder DHL-Paketlabel drucken möchte, bekommt auf Wunsch einen <strong>Labelprinter für 4,90 € im Monat zzgl. MwSt.</strong> Damit drucken Sie Internetmarken und Versandlabel direkt aus der epostbox.</p>
+    <p class="fa-lead">Viele Kunden lassen Rechnungen, Mahnungen und Serienbriefe über die epostbox laufen und frankieren nur noch Sonderfälle selbst. Wer die Maschine ganz abgibt und trotzdem Briefmarken oder DHL-Paketlabel drucken möchte, bekommt auf Wunsch einen <strong>Labelprinter für 4,90&nbsp;€ im Monat zzgl.&nbsp;MwSt.</strong> Damit drucken Sie Internetmarken und Versandlabel direkt aus der epostbox.</p>
     <div class="hero-ctas" style="justify-content:flex-start">
-      <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-primary" target="_blank">Jetzt mit 5 € Startguthaben testen</a>
+      <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-primary" target="_blank">Jetzt mit 5&nbsp;€ Startguthaben testen</a>
       <a href="faq.html" class="btn-ghost-fa">Alle Fragen zur epostbox</a>
     </div>
   </div>
@@ -947,11 +955,11 @@ nav{gap:1.5rem}
   <div class="sec-in fa-faq">
     <div class="sec-tag">Häufige Fragen</div>
     <h2 class="sec-h">Fragen zum Wechsel</h2>
-    <p class="sec-sub">Ihre Frage ist nicht dabei? Rufen Sie uns an: 06204 / 9622-0.</p>
+    <p class="sec-sub">Ihre Frage ist nicht dabei? Rufen Sie uns an: 06204&nbsp;/&nbsp;9622-0.</p>
     <details><summary>Muss ich meine Frankiermaschine sofort abgeben?</summary><p>Nein. Die epostbox hat keine Mindestlaufzeit und keine Mindestmenge. Sie können sofort starten und die Frankiermaschine weiter nutzen, bis die Verträge auslaufen. So gibt es keinen harten Schnitt.</p></details>
     <details><summary>Was passiert mit dem Restguthaben in der Frankiermaschine?</summary><p>Wir unterstützen Sie dabei, und es geht Ihnen kein Porto verloren.</p></details>
     <details><summary>Brauche ich neue Hardware oder Software?</summary><p>Nein. Die epostbox läuft im Browser. Ihre Briefe schicken Sie wie gewohnt über die Druckfunktion aus Word, Ihrer Warenwirtschaft oder Ihrem CRM, oder Sie laden sie als PDF hoch. Nur wer weiterhin Pakete oder Briefmarken selbst druckt, bekommt auf Wunsch einen Labelprinter.</p></details>
-    <details><summary>Lohnt sich das auch bei wenig Post?</summary><p>Oft gerade dann. Bei wenigen Briefen im Monat kosten Leasing, Wartung und Tinte einer Frankiermaschine schnell mehr als das Porto selbst. Bei der epostbox zahlen Sie eine monatliche Grundgebühr von 9,90 € zzgl. MwSt. und dazu nur die Briefe, die Sie tatsächlich verschicken. Wie das bei Ihrer Menge aussieht, rechnen wir gern mit Ihnen durch.</p></details>
+    <details><summary>Lohnt sich das auch bei wenig Post?</summary><p>Oft gerade dann. Bei wenigen Briefen im Monat kosten Leasing, Wartung und Tinte einer Frankiermaschine schnell mehr als das Porto selbst. Bei der epostbox zahlen Sie eine monatliche Grundgebühr von 9,90&nbsp;€ zzgl.&nbsp;MwSt. und dazu nur die Briefe, die Sie tatsächlich verschicken. Wie das bei Ihrer Menge aussieht, rechnen wir gern mit Ihnen durch.</p></details>
     <details><summary>Kann ich weiter Einschreiben verschicken?</summary><p>Ja. Einschreiben wählen Sie beim Versand in der epostbox aus. Den Status jeder Sendung sehen Sie jederzeit online.</p></details>
     <details><summary>Wer kümmert sich um die Abmeldung der alten Maschine?</summary><p>Wir. Als Servicepartner für Frankiermaschinen kennen wir die Verträge dahinter. Wir prüfen mit Ihnen die Fristen, nennen Ihnen den passenden Termin und begleiten die Abmeldung.</p></details>
   </div>
@@ -1007,9 +1015,9 @@ nav{gap:1.5rem}
             <label for="cb-zeit">Wann darf ich anrufen?</label>
             <select id="cb-zeit">
               <option value="">Bitte wählen</option>
-              <option>Morgens (8–10 Uhr)</option>
-              <option>Vormittags (10–12 Uhr)</option>
-              <option>Nachmittags (13–16 Uhr)</option>
+              <option>Morgens (8–10&nbsp;Uhr)</option>
+              <option>Vormittags (10–12&nbsp;Uhr)</option>
+              <option>Nachmittags (13–16&nbsp;Uhr)</option>
               <option>Egal – einfach anrufen</option>
             </select>
           </div>
