@@ -643,6 +643,14 @@ nav{gap:1.5rem}
 /* Bild */
 .pic{max-width:960px;margin:2.75rem auto 0}
 .pic img{width:100%;height:auto;border-radius:var(--radius-card);border:1.5px solid var(--gray-mid);background:#f6f4f7}
+
+/* ── ZEILENUMBRÜCHE (auf allen Seiten gleich) ── */
+h1,h2,h3,h4,summary,blockquote,.hero-eyebrow,.sec-tag,.sec-h,.faq-question,.glance b,.topics b{text-wrap:balance}
+p,li,dd,td,.hero-sub,.sec-sub,.fa-lead,.faq-answer,.glance span,.topics span,.tldr{text-wrap:pretty}
+.fa-faq summary,summary{display:block}
+.fa-faq summary{position:relative;padding-right:1.75rem}
+.fa-faq summary::after{float:none;position:absolute;right:0;top:0}
+a.btn-primary,a.btn-ghost-fa,.btn-primary,.btn-ghost-fa{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -686,7 +694,7 @@ nav{gap:1.5rem}
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-      06204 / 9622-0
+      06204&nbsp;/&nbsp;9622-0
     </a>
     <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="nav-cta" target="_blank">
       Jetzt testen
@@ -714,7 +722,7 @@ nav{gap:1.5rem}
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-    06204 / 9622-0
+    06204&nbsp;/&nbsp;9622-0
   </a>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="m-cta" target="_blank">
     Jetzt testen
@@ -738,7 +746,7 @@ nav{gap:1.5rem}
       </a>
     </div>
     <div class="hero-trust">
-      <span><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>5 € Startguthaben</span>
+      <span><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>5&nbsp;€ Startguthaben</span>
       <span><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Keine Vertragslaufzeit</span>
       <span><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Keine Installation nötig</span>
     </div>
@@ -762,7 +770,7 @@ nav{gap:1.5rem}
       </div>
       <div class="obj-card">
         <div class="obj-q"><span class="q-mark">?</span>„Ich habe nicht täglich viel Post."</div>
-        <p class="obj-a">Die monatliche Grundgebühr beträgt lediglich <strong>9,90 € zzgl. MwSt.</strong> – dazu zahlen Sie nur, was Sie tatsächlich versenden. Kein Mindestvolumen, keine versteckten Kosten, jederzeit kündbar.</p>
+        <p class="obj-a">Die monatliche Grundgebühr beträgt lediglich <strong>9,90&nbsp;€ zzgl.&nbsp;MwSt.</strong> – dazu zahlen Sie nur, was Sie tatsächlich versenden. Kein Mindestvolumen, keine versteckten Kosten, jederzeit kündbar.</p>
       </div>
       <div class="obj-card">
         <div class="obj-q"><span class="q-mark">?</span>„Meine Mitarbeiter werden das nicht nutzen."</div>
@@ -845,11 +853,11 @@ nav{gap:1.5rem}
       <div class="feat">
         <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h3>Transparente Kosten</h3>
-        <p>Monatliche Grundgebühr: <strong>9,90 € zzgl. MwSt.</strong><br>Dazu zahlen Sie nur den tatsächlichen Versand – kein Mindestvolumen, jederzeit kündbar.</p>
+        <p>Monatliche Grundgebühr: <strong>9,90&nbsp;€ zzgl.&nbsp;MwSt.</strong><br>Dazu zahlen Sie nur den tatsächlichen Versand – kein Mindestvolumen, jederzeit kündbar.</p>
       </div>
       <div class="feat" style="grid-column:1/-1;max-width:none">
         <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3>Optionaler Labelprinter – nur 4,90 € zzgl. MwSt. / Monat</h3>
+        <h3>Optionaler Labelprinter – nur 4,90&nbsp;€ zzgl.&nbsp;MwSt. / Monat</h3>
         <p>Auf Wunsch erhalten Sie einen Labelprinter zum Drucken von <strong>Internetmarken (Briefmarken)</strong> und <strong>DHL-Versandlabeln</strong> – direkt aus der epostbox heraus. Ideal für Unternehmen mit gemischtem Versand.</p>
       </div>
     </div>
@@ -918,9 +926,9 @@ nav{gap:1.5rem}
   <div class="offer-card">
     <div>
       <p class="sec-tag" style="margin-bottom:.6rem">Ihr Einstiegsangebot</p>
-      <h2 class="offer-h">Jetzt starten –<br><em>ohne Risiko &amp; ohne Vertrag</em></h2>
+      <h2 class="offer-h">Jetzt starten –<br><em>ohne Risiko &amp; ohne&nbsp;Vertrag</em></h2>
       <div class="offer-pills">
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>5 € Startguthaben</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>5&nbsp;€ Startguthaben</span>
         <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Keine Vertragslaufzeit</span>
         <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Keine Installation</span>
         <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Jederzeit kündbar</span>
@@ -929,7 +937,7 @@ nav{gap:1.5rem}
     </div>
     <div class="offer-badge">
       <span class="lbl">Startguthaben</span>
-      <span class="amt">5 €</span>
+      <span class="amt">5&nbsp;€</span>
       <span class="nt">geschenkt · kein Vertrag</span>
     </div>
   </div>
@@ -947,9 +955,9 @@ nav{gap:1.5rem}
       <div class="call-row">
         <a href="tel:0620496220" class="btn-call">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-          06204 / 9622-0
+          06204&nbsp;/&nbsp;9622-0
         </a>
-        <span class="call-hint">Mo–Do 08:00–17:00 &nbsp;|&nbsp; Fr 08:00–16:00 Uhr</span>
+        <span class="call-hint">Mo–Do 08:00–17:00 &nbsp;|&nbsp; Fr 08:00–16:00&nbsp;Uhr</span>
       </div>
     </div>
   </div>
@@ -1018,7 +1026,7 @@ nav{gap:1.5rem}
   <p>Die Registrierung dauert weniger als 3 Minuten. Kein Vertrag, kein Risiko – einfach ausprobieren.</p>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-primary" target="_blank" style="font-size:1.0625rem;padding:1rem 2.25rem;margin:0 auto">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-    Jetzt mit 5 € Startguthaben registrieren
+    Jetzt mit 5&nbsp;€ Startguthaben registrieren
   </a>
   <div class="final-note">Mit dem Klick gelangen Sie direkt zur Registrierungsseite der epostbox. Es entstehen keine versteckten Kosten.</div>
 </section>
@@ -1073,9 +1081,9 @@ nav{gap:1.5rem}
             <label for="cb-zeit">Wann darf ich anrufen?</label>
             <select id="cb-zeit">
               <option value="">Bitte wählen</option>
-              <option>Morgens (8–10 Uhr)</option>
-              <option>Vormittags (10–12 Uhr)</option>
-              <option>Nachmittags (13–16 Uhr)</option>
+              <option>Morgens (8–10&nbsp;Uhr)</option>
+              <option>Vormittags (10–12&nbsp;Uhr)</option>
+              <option>Nachmittags (13–16&nbsp;Uhr)</option>
               <option>Egal – einfach anrufen</option>
             </select>
           </div>

@@ -664,8 +664,16 @@ nav{gap:1.5rem}
   .split-env{grid-template-columns:repeat(2,minmax(0,1fr))}
   .anim-card{padding:1.5rem 1.1rem}
 }
-@media(max-width:680px){.glance,.topics{grid-template-columns:1fr}.tldr{margin-top:-1.5rem}.hero h1{font-size:clamp(1.75rem,8.2vw,2.25rem);hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
+@media(max-width:680px){.glance,.topics{grid-template-columns:1fr}.tldr{margin-top:-1.5rem}.hero h1{font-size:clamp(1.75rem,8.2vw,2.25rem)}}
 @media(prefers-reduced-motion:reduce){.flow::after,.flow li,.flow .fs-ic,.split-env li,.track li{transition:none}.split-arrow svg{animation:none}}
+
+/* ── ZEILENUMBRÜCHE (auf allen Seiten gleich) ── */
+h1,h2,h3,h4,summary,blockquote,.hero-eyebrow,.sec-tag,.sec-h,.faq-question,.glance b,.topics b{text-wrap:balance}
+p,li,dd,td,.hero-sub,.sec-sub,.fa-lead,.faq-answer,.glance span,.topics span,.tldr{text-wrap:pretty}
+.fa-faq summary,summary{display:block}
+.fa-faq summary{position:relative;padding-right:1.75rem}
+.fa-faq summary::after{float:none;position:absolute;right:0;top:0}
+a.btn-primary,a.btn-ghost-fa,.btn-primary,.btn-ghost-fa{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -709,7 +717,7 @@ nav{gap:1.5rem}
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-      06204 / 9622-0
+      06204&nbsp;/&nbsp;9622-0
     </a>
     <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="nav-cta" target="_blank">
       Jetzt testen
@@ -737,7 +745,7 @@ nav{gap:1.5rem}
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-    06204 / 9622-0
+    06204&nbsp;/&nbsp;9622-0
   </a>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="m-cta" target="_blank">
     Jetzt testen
@@ -752,7 +760,7 @@ nav{gap:1.5rem}
     <h1>Bescheide versenden,<br><em>direkt aus der Verwaltung.</em></h1>
     <p class="hero-sub">Steuer- und Gebührenbescheide, Bußgeldbescheide, Bürgerbriefe: Mit der epostbox gehen Schreiben der Verwaltung vom Arbeitsplatz zur Deutschen Post. Postzustellungsaufträge eingeschlossen.</p>
     <div class="hero-ctas">
-      <a href="tel:0620496220" class="btn-primary">Beratung: 06204 / 9622-0</a>
+      <a href="tel:0620496220" class="btn-primary">Beratung: 06204&nbsp;/&nbsp;9622-0</a>
       <a href="#ablauf" class="btn-ghost-fa">So funktioniert's</a>
     </div>
   </div>
@@ -855,7 +863,7 @@ nav{gap:1.5rem}
         <p>Was drucken kann, kann auch versenden: Die epostbox erscheint als Drucker. Für Terminalserver und Printserver gibt es eigene Varianten.</p>
       </div>
     </div>
-    <p class="fa-note">Welche Anbindung in Ihrer Verwaltung passt, klären wir in einem kurzen Gespräch: 06204 / 9622-0.</p>
+    <p class="fa-note">Welche Anbindung in Ihrer Verwaltung passt, klären wir in einem kurzen Gespräch: 06204&nbsp;/&nbsp;9622-0.</p>
   </div>
 </section>
 
@@ -904,10 +912,10 @@ nav{gap:1.5rem}
         <p>Wer regelmäßig viele Briefe verschickt, bekommt bei uns individuelle Konditionen. Sprechen Sie uns auf Ihre Versandmenge an.</p>
       </div>
     </div>
-    <p class="fa-note">Die epostbox kostet bei uns 9,90 € im Monat zzgl. MwSt., dazu nur die Briefe, die Sie tatsächlich verschicken. Keine Vertragslaufzeit, 5 € Startguthaben zum Testen.</p>
+    <p class="fa-note">Die epostbox kostet bei uns 9,90&nbsp;€ im Monat zzgl.&nbsp;MwSt., dazu nur die Briefe, die Sie tatsächlich verschicken. Keine Vertragslaufzeit, 5&nbsp;€ Startguthaben zum Testen.</p>
     <div class="hero-ctas" style="justify-content:flex-start;margin-top:1.5rem">
-      <a href="tel:0620496220" class="btn-primary">Beratung: 06204 / 9622-0</a>
-      <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-ghost-fa" target="_blank" rel="noopener">Mit 5 € Startguthaben testen</a>
+      <a href="tel:0620496220" class="btn-primary">Beratung: 06204&nbsp;/&nbsp;9622-0</a>
+      <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-ghost-fa" target="_blank" rel="noopener">Mit 5&nbsp;€ Startguthaben testen</a>
     </div>
   </div>
 </section>
@@ -920,7 +928,7 @@ nav{gap:1.5rem}
     <details><summary>Gibt es eine Anbindung an regisafe, WiNOWiG oder CC e-gov?</summary><p>Ja. Für diese drei Programme gibt es Anbindungen an die epostbox, sodass Schreiben direkt aus der Software in den Versand gehen. Andere Programme nutzen die Druckfunktion.</p></details>
     <details><summary>Läuft die epostbox auf unserem Terminalserver?</summary><p>Ja. Neben der Browser-Version gibt es Varianten für Windows-Terminalserver und Printserver, die sich in bestehende IT-Umgebungen einfügen.</p></details>
     <details><summary>Wie stellen wir sicher, dass kein Bescheid ungeprüft rausgeht?</summary><p>Mit der Freigabe nach dem 4-Augen-Prinzip. Ein Schreiben wird erst verschickt, wenn eine berechtigte zweite Person es freigegeben hat. Für Abwesenheiten lässt sich eine Vertretung festlegen.</p></details>
-    <details><summary>Wo werden die Daten verarbeitet?</summary><p>Server und Druckstandorte der epostbox liegen ausschließlich in Deutschland. Die Übertragung ist mit TLS 1.3 verschlüsselt, alle beteiligten Dienstleister sind an das Postgeheimnis gebunden. Ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO ist möglich. Mehr dazu auf unserer Seite <a href="datensicherheit.html">Datensicherheit</a>.</p></details>
+    <details><summary>Wo werden die Daten verarbeitet?</summary><p>Server und Druckstandorte der epostbox liegen ausschließlich in Deutschland. Die Übertragung ist mit TLS&nbsp;1.3 verschlüsselt, alle beteiligten Dienstleister sind an das Postgeheimnis gebunden. Ein Vertrag zur Auftragsverarbeitung nach Art.&nbsp;28 DSGVO ist möglich. Mehr dazu auf unserer Seite <a href="datensicherheit.html">Datensicherheit</a>.</p></details>
     <details><summary>Brauchen wir eine Mindestmenge oder einen langen Vertrag?</summary><p>Nein. Es gibt keine Mindestmenge und keine Vertragslaufzeit. Für große Mengen bieten wir individuelle Konditionen an.</p></details>
   </div>
 </section>
@@ -991,9 +999,9 @@ nav{gap:1.5rem}
             <label for="cb-zeit">Wann darf ich anrufen?</label>
             <select id="cb-zeit">
               <option value="">Bitte wählen</option>
-              <option>Morgens (8–10 Uhr)</option>
-              <option>Vormittags (10–12 Uhr)</option>
-              <option>Nachmittags (13–16 Uhr)</option>
+              <option>Morgens (8–10&nbsp;Uhr)</option>
+              <option>Vormittags (10–12&nbsp;Uhr)</option>
+              <option>Nachmittags (13–16&nbsp;Uhr)</option>
               <option>Egal – einfach anrufen</option>
             </select>
           </div>

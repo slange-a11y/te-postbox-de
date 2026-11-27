@@ -416,7 +416,7 @@ footer a:hover{color:#fff}
 
 /* Geschäftsführer-Kästen am Handy nicht breiter als der Bildschirm */
 .imp-cols>*{min-width:0}
-@media(max-width:680px){.imp-cols{grid-template-columns:1fr}.imp-content h2,h2{overflow-wrap:anywhere;hyphens:auto}}
+@media(max-width:680px){.imp-cols{grid-template-columns:1fr}.imp-content h2,h2{overflow-wrap:break-word}}
 /* ── MENÜ (auf allen Seiten gleich) ── */
 nav{gap:1.5rem}
 .nav-logos{display:flex;align-items:center;gap:1.5rem;flex-shrink:0}
@@ -461,6 +461,14 @@ nav{gap:1.5rem}
 .mobile-menu .m-group{padding:.75rem 1rem .25rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded)}
 .mobile-menu a.m-sub{padding:.55rem 1rem .55rem 1.75rem;font-size:.9375rem}
 .mobile-menu{max-height:calc(100vh - 4rem);overflow-y:auto}
+
+/* ── ZEILENUMBRÜCHE (auf allen Seiten gleich) ── */
+h1,h2,h3,h4,summary,blockquote,.hero-eyebrow,.sec-tag,.sec-h,.faq-question,.glance b,.topics b{text-wrap:balance}
+p,li,dd,td,.hero-sub,.sec-sub,.fa-lead,.faq-answer,.glance span,.topics span,.tldr{text-wrap:pretty}
+.fa-faq summary,summary{display:block}
+.fa-faq summary{position:relative;padding-right:1.75rem}
+.fa-faq summary::after{float:none;position:absolute;right:0;top:0}
+a.btn-primary,a.btn-ghost-fa,.btn-primary,.btn-ghost-fa{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -503,7 +511,7 @@ nav{gap:1.5rem}
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-      06204 / 9622-0
+      06204&nbsp;/&nbsp;9622-0
     </a>
     <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="nav-cta" target="_blank">
       Jetzt testen
@@ -531,7 +539,7 @@ nav{gap:1.5rem}
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-    06204 / 9622-0
+    06204&nbsp;/&nbsp;9622-0
   </a>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="m-cta" target="_blank">
     Jetzt testen
@@ -544,7 +552,7 @@ nav{gap:1.5rem}
   <div class="imp-hero-in">
     <span class="imp-eyebrow">Rechtliches</span>
     <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 DDG</p>
+    <p>Angaben gemäß §&nbsp;5 DDG</p>
   </div>
 </header>
 
@@ -563,7 +571,7 @@ nav{gap:1.5rem}
       <div class="imp-content">
         <p><strong>TE Printline GmbH</strong><br>
         Ladenburger Straße 7<br>
-        68519 Viernheim</p>
+        68519&nbsp;Viernheim</p>
       </div>
     </div>
 
@@ -577,8 +585,8 @@ nav{gap:1.5rem}
       </div>
       <div class="imp-content">
         <table class="imp-table">
-          <tr><td>Telefon</td><td><a href="tel:062049622-0">06204 / 9622-0</a></td></tr>
-          <tr><td>Telefax</td><td>06204 / 9622-20</td></tr>
+          <tr><td>Telefon</td><td><a href="tel:062049622-0">06204&nbsp;/&nbsp;9622-0</a></td></tr>
+          <tr><td>Telefax</td><td>06204&nbsp;/&nbsp;9622-20</td></tr>
           <tr><td>E-Mail</td><td><a href="mailto:mail@te-printline.de">mail@te-printline.de</a></td></tr>
           <tr><td>Internet</td><td><a href="https://www.te-printline.de" target="_blank" rel="noopener">www.te-printline.de</a></td></tr>
         </table>
@@ -620,9 +628,9 @@ nav{gap:1.5rem}
         <h2>Verantwortlich für den Inhalt</h2>
       </div>
       <div class="imp-content">
-        <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
+        <p>Verantwortlich für den Inhalt nach §&nbsp;18 Abs.&nbsp;2 MStV:</p>
         <p><strong>Jörg Scholtz, Carola Scholtz, Silvio Lange</strong><br>
-        Anschrift wie oben (TE Printline GmbH, Ladenburger Straße 7, 68519 Viernheim)</p>
+        Anschrift wie oben (TE Printline GmbH, Ladenburger Straße 7, 68519&nbsp;Viernheim)</p>
       </div>
     </div>
 
@@ -658,7 +666,7 @@ nav{gap:1.5rem}
         <h2>Umsatzsteuer-ID</h2>
       </div>
       <div class="imp-content">
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:</p>
+        <p>Umsatzsteuer-Identifikationsnummer gemäß §&nbsp;27a Umsatzsteuergesetz:</p>
         <p><strong>DE 220281135</strong></p>
       </div>
     </div>
@@ -676,7 +684,7 @@ nav{gap:1.5rem}
         <div class="imp-block-icon">
           <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h2>Angaben zur Berufshaftpflichtversicherung</h2>
+        <h2>Angaben zur Berufshaftpflicht&shy;versicherung</h2>
       </div>
       <div class="imp-content">
         <table class="imp-table">

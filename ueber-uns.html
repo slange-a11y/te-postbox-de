@@ -474,6 +474,14 @@ nav{gap:1.5rem}
 .mobile-menu .m-group{padding:.75rem 1rem .25rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded)}
 .mobile-menu a.m-sub{padding:.55rem 1rem .55rem 1.75rem;font-size:.9375rem}
 .mobile-menu{max-height:calc(100vh - 4rem);overflow-y:auto}
+
+/* ── ZEILENUMBRÜCHE (auf allen Seiten gleich) ── */
+h1,h2,h3,h4,summary,blockquote,.hero-eyebrow,.sec-tag,.sec-h,.faq-question,.glance b,.topics b{text-wrap:balance}
+p,li,dd,td,.hero-sub,.sec-sub,.fa-lead,.faq-answer,.glance span,.topics span,.tldr{text-wrap:pretty}
+.fa-faq summary,summary{display:block}
+.fa-faq summary{position:relative;padding-right:1.75rem}
+.fa-faq summary::after{float:none;position:absolute;right:0;top:0}
+a.btn-primary,a.btn-ghost-fa,.btn-primary,.btn-ghost-fa{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -517,7 +525,7 @@ nav{gap:1.5rem}
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-      06204 / 9622-0
+      06204&nbsp;/&nbsp;9622-0
     </a>
     <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="nav-cta" target="_blank">
       Jetzt testen
@@ -545,7 +553,7 @@ nav{gap:1.5rem}
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-    06204 / 9622-0
+    06204&nbsp;/&nbsp;9622-0
   </a>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="m-cta" target="_blank">
     Jetzt testen
@@ -557,7 +565,7 @@ nav{gap:1.5rem}
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Über uns</div>
-    <h1>Ihr epostbox-Partner<br><em>aus Viernheim.</em></h1>
+    <h1>Ihr <span style="white-space:nowrap">epostbox-Partner</span><br><em>aus Viernheim.</em></h1>
     <p class="hero-sub">Wir sind TE Printline GmbH – ein eingespieltes Team aus Viernheim, das Unternehmen dabei hilft, ihren Postausgang effizienter, digitaler und kostengünstiger zu gestalten.</p>
   </div>
 </section>
@@ -677,7 +685,7 @@ nav{gap:1.5rem}
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3>Vor Ort in Viernheim</h3>
-        <p class="info-lines"><strong>TE Printline GmbH</strong><br>Ladenburger Straße 7<br>68519 Viernheim</p>
+        <p class="info-lines"><strong>TE Printline GmbH</strong><br>Ladenburger Straße 7<br>68519&nbsp;Viernheim</p>
       </div>
 
       <!-- Öffnungszeiten -->
@@ -686,7 +694,7 @@ nav{gap:1.5rem}
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <h3>Öffnungszeiten</h3>
-        <p class="info-lines">Mo–Do&nbsp;&nbsp;08:00–17:00 Uhr<br>Fr&nbsp;&nbsp;08:00–16:00 Uhr</p>
+        <p class="info-lines">Mo–Do&nbsp;&nbsp;08:00–17:00&nbsp;Uhr<br>Fr&nbsp;&nbsp;08:00–16:00&nbsp;Uhr</p>
       </div>
 
       <!-- Direkter Kontakt -->
@@ -695,7 +703,7 @@ nav{gap:1.5rem}
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
         </div>
         <h3>Direkter Draht</h3>
-        <p class="info-lines">Tel: 06204 / 9622-0<br>mail@te-printline.de</p>
+        <p class="info-lines">Tel: 06204&nbsp;/&nbsp;9622-0<br>mail@te-printline.de</p>
       </div>
 
       <!-- Digitale Meetings (hervorgehoben) -->
@@ -773,9 +781,9 @@ nav{gap:1.5rem}
             <label for="cb-zeit">Wann darf ich anrufen?</label>
             <select id="cb-zeit">
               <option value="">Bitte wählen</option>
-              <option>Morgens (8–10 Uhr)</option>
-              <option>Vormittags (10–12 Uhr)</option>
-              <option>Nachmittags (13–16 Uhr)</option>
+              <option>Morgens (8–10&nbsp;Uhr)</option>
+              <option>Vormittags (10–12&nbsp;Uhr)</option>
+              <option>Nachmittags (13–16&nbsp;Uhr)</option>
               <option>Egal – einfach anrufen</option>
             </select>
           </div>

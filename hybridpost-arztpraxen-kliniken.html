@@ -672,8 +672,16 @@ nav{gap:1.5rem}
   .split-env{grid-template-columns:repeat(2,minmax(0,1fr))}
   .anim-card{padding:1.5rem 1.1rem}
 }
-@media(max-width:680px){.glance,.topics{grid-template-columns:1fr}.tldr{margin-top:-1.5rem}.hero h1{font-size:clamp(1.75rem,8.2vw,2.25rem);hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
+@media(max-width:680px){.glance,.topics{grid-template-columns:1fr}.tldr{margin-top:-1.5rem}.hero h1{font-size:clamp(1.75rem,8.2vw,2.25rem)}}
 @media(prefers-reduced-motion:reduce){.flow::after,.flow li,.flow .fs-ic,.split-env li,.track li{transition:none}.split-arrow svg{animation:none}}
+
+/* ── ZEILENUMBRÜCHE (auf allen Seiten gleich) ── */
+h1,h2,h3,h4,summary,blockquote,.hero-eyebrow,.sec-tag,.sec-h,.faq-question,.glance b,.topics b{text-wrap:balance}
+p,li,dd,td,.hero-sub,.sec-sub,.fa-lead,.faq-answer,.glance span,.topics span,.tldr{text-wrap:pretty}
+.fa-faq summary,summary{display:block}
+.fa-faq summary{position:relative;padding-right:1.75rem}
+.fa-faq summary::after{float:none;position:absolute;right:0;top:0}
+a.btn-primary,a.btn-ghost-fa,.btn-primary,.btn-ghost-fa{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -717,7 +725,7 @@ nav{gap:1.5rem}
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-      06204 / 9622-0
+      06204&nbsp;/&nbsp;9622-0
     </a>
     <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="nav-cta" target="_blank">
       Jetzt testen
@@ -745,7 +753,7 @@ nav{gap:1.5rem}
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-    06204 / 9622-0
+    06204&nbsp;/&nbsp;9622-0
   </a>
   <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="m-cta" target="_blank">
     Jetzt testen
@@ -760,12 +768,12 @@ nav{gap:1.5rem}
     <h1>Arztbriefe und Befunde,<br><em>ohne Postberg am Empfang.</em></h1>
     <p class="hero-sub">Praxen, Kliniken und Pflegedienste verschicken jeden Tag Briefe mit sensiblen Daten. Mit der epostbox gehen Arztbriefe, Befunde und Rechnungen verschlüsselt vom Computer in den Versand. Gedruckt wird in Deutschland, zugestellt von der Deutschen Post.</p>
     <div class="hero-ctas">
-      <a href="tel:0620496220" class="btn-primary">Beratung: 06204 / 9622-0</a>
+      <a href="tel:0620496220" class="btn-primary">Beratung: 06204&nbsp;/&nbsp;9622-0</a>
       <a href="#ablauf" class="btn-ghost-fa">So funktioniert's</a>
     </div>
   </div>
 </section>
-<div class="tldr-wrap"><p class="tldr"><strong>Kurz erklärt:</strong> Mit der epostbox drucken Sie Arztbriefe, Befunde oder Rechnungen aus Ihrer Praxissoftware einfach an die epostbox statt an den Bürodrucker. Die Übertragung ist mit TLS 1.3 verschlüsselt, Druck und Verarbeitung finden nur in Deutschland statt, und alle Beteiligten sind an das Postgeheimnis gebunden.</p></div>
+<div class="tldr-wrap"><p class="tldr"><strong>Kurz erklärt:</strong> Mit der epostbox drucken Sie Arztbriefe, Befunde oder Rechnungen aus Ihrer Praxissoftware einfach an die epostbox statt an den Bürodrucker. Die Übertragung ist mit TLS&nbsp;1.3 verschlüsselt, Druck und Verarbeitung finden nur in Deutschland statt, und alle Beteiligten sind an das Postgeheimnis gebunden.</p></div>
 
 <section class="fa-sec">
   <div class="sec-in">
@@ -774,10 +782,10 @@ nav{gap:1.5rem}
     <p class="fa-lead">Briefe drucken, falzen, kuvertieren und frankieren kostet am Empfang jeden Tag Zeit. Mit der epostbox schicken Sie den Brief direkt aus der Software ab, und das Team kann sich um die Patienten kümmern.</p>
     <figure class="pic"><img src="img/bilder/bild-praxis-1600.webp" srcset="img/bilder/bild-praxis-800.webp 800w, img/bilder/bild-praxis-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px" width="1600" height="900" alt="Illustration: Vom Empfang einer Arztpraxis geht ein Brief geschützt durch ein Schloss-Symbol zum Briefkasten" loading="lazy" decoding="async"></figure>
     <div class="glance">
-      <div><b>Verschlüsselt</b><span>Übertragung mit TLS 1.3.</span></div>
+      <div><b>Verschlüsselt</b><span>Übertragung mit TLS&nbsp;1.3.</span></div>
       <div><b>In Deutschland</b><span>Server und Druck nur in Deutschland.</span></div>
       <div><b>Postgeheimnis</b><span>Gilt für alle beteiligten Dienstleister.</span></div>
-      <div><b>AV-Vertrag</b><span>Nach Art. 28 DSGVO.</span></div>
+      <div><b>AV-Vertrag</b><span>Nach Art.&nbsp;28 DSGVO.</span></div>
     </div>
   </div>
 </section>
@@ -789,7 +797,7 @@ nav{gap:1.5rem}
     <div class="anim-card">
     <ol class="flow" data-anim style="--n:5">
       <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Brief schreiben</h3><p>In Ihrer Praxis- oder Kliniksoftware.</p></li>
-      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Verschlüsselt senden</h3><p>Per Druckfunktion, mit TLS 1.3.</p></li>
+      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Verschlüsselt senden</h3><p>Per Druckfunktion, mit TLS&nbsp;1.3.</p></li>
       <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div><h3>Druck in Deutschland</h3><p>Gedruckt, gefalzt, kuvertiert, frankiert.</p></li>
       <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><h3>Zustellung</h3><p>Die Deutsche Post bringt den Brief.</p></li>
       <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Automatisch löschen</h3><p>Nach der Frist, die Sie festlegen.</p></li>
@@ -845,7 +853,7 @@ nav{gap:1.5rem}
       <div class="wert">
         <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <h3>Verschlüsselte Übertragung</h3>
-        <p>Dokumente werden mit TLS 1.3 übertragen, dem Standard, den auch Banken nutzen.</p>
+        <p>Dokumente werden mit TLS&nbsp;1.3 übertragen, dem Standard, den auch Banken nutzen.</p>
       </div>
       <div class="wert">
         <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -865,12 +873,12 @@ nav{gap:1.5rem}
       <div class="wert">
         <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <h3>AV-Vertrag</h3>
-        <p>Für die Verarbeitung von Patientendaten gibt es einen Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+        <p>Für die Verarbeitung von Patientendaten gibt es einen Vertrag zur Auftragsverarbeitung nach Art.&nbsp;28 DSGVO.</p>
       </div>
       <div class="wert">
         <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Zertifiziert</h3>
-        <p>Die epostbox ist nach ISO 27001 zertifiziert. Alle Beteiligten sind an das Postgeheimnis gebunden.</p>
+        <p>Die epostbox ist nach ISO&nbsp;27001 zertifiziert. Alle Beteiligten sind an das Postgeheimnis gebunden.</p>
       </div>
     </div>
     <p class="fa-note">Mehr zu Zertifikaten, Anmeldung und Rechten lesen Sie auf unserer Seite <a href="datensicherheit.html" style="color:var(--red)">Datensicherheit</a>.</p>
@@ -898,10 +906,10 @@ nav{gap:1.5rem}
         <p>Wer regelmäßig viele Briefe verschickt, bekommt bei uns individuelle Konditionen. Sprechen Sie uns auf Ihre Versandmenge an.</p>
       </div>
     </div>
-    <p class="fa-note">Die epostbox kostet bei uns 9,90 € im Monat zzgl. MwSt., dazu nur die Briefe, die Sie tatsächlich verschicken. Keine Vertragslaufzeit, 5 € Startguthaben zum Testen.</p>
+    <p class="fa-note">Die epostbox kostet bei uns 9,90&nbsp;€ im Monat zzgl.&nbsp;MwSt., dazu nur die Briefe, die Sie tatsächlich verschicken. Keine Vertragslaufzeit, 5&nbsp;€ Startguthaben zum Testen.</p>
     <div class="hero-ctas" style="justify-content:flex-start;margin-top:1.5rem">
-      <a href="tel:0620496220" class="btn-primary">Beratung: 06204 / 9622-0</a>
-      <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-ghost-fa" target="_blank" rel="noopener">Mit 5 € Startguthaben testen</a>
+      <a href="tel:0620496220" class="btn-primary">Beratung: 06204&nbsp;/&nbsp;9622-0</a>
+      <a href="https://printing.epostbox.de/?signup&brokerId=b8636e02231b4b39517facf4fb7663c1" class="btn-ghost-fa" target="_blank" rel="noopener">Mit 5&nbsp;€ Startguthaben testen</a>
     </div>
   </div>
 </section>
@@ -911,11 +919,11 @@ nav{gap:1.5rem}
     <div class="sec-tag">Häufige Fragen</div>
     <h2 class="sec-h">Fragen und Antworten</h2>
     <details><summary>Kann ich direkt aus meiner Praxissoftware versenden?</summary><p>Wenn Ihre Software drucken kann, ja. Sie wählen beim Drucken die epostbox als Drucker, und der Brief geht in den Versand. Alternativ laden Sie Dokumente als PDF hoch.</p></details>
-    <details><summary>Wie sind die Patientendaten geschützt?</summary><p>Die Übertragung ist mit TLS 1.3 verschlüsselt. Server und Druckstandorte liegen ausschließlich in Deutschland, die epostbox ist nach ISO 27001 zertifiziert, und alle beteiligten Dienstleister sind an das Postgeheimnis gebunden.</p></details>
-    <details><summary>Gibt es einen Vertrag zur Auftragsverarbeitung?</summary><p>Ja. Für die Verarbeitung personenbezogener Daten gibt es einen Vertrag zur Auftragsverarbeitung (AV-Vertrag) nach Art. 28 DSGVO. Wir unterstützen Sie beim Abschluss.</p></details>
+    <details><summary>Wie sind die Patientendaten geschützt?</summary><p>Die Übertragung ist mit TLS&nbsp;1.3 verschlüsselt. Server und Druckstandorte liegen ausschließlich in Deutschland, die epostbox ist nach ISO&nbsp;27001 zertifiziert, und alle beteiligten Dienstleister sind an das Postgeheimnis gebunden.</p></details>
+    <details><summary>Gibt es einen Vertrag zur Auftragsverarbeitung?</summary><p>Ja. Für die Verarbeitung personenbezogener Daten gibt es einen Vertrag zur Auftragsverarbeitung (AV-Vertrag) nach Art.&nbsp;28 DSGVO. Wir unterstützen Sie beim Abschluss.</p></details>
     <details><summary>Wer in der Praxis kann Briefe verschicken?</summary><p>Das legen Sie fest. Sie vergeben Benutzer und Rechte und können eine Freigabe nach dem 4-Augen-Prinzip einrichten.</p></details>
     <details><summary>Wie lange bleiben Dokumente gespeichert?</summary><p>So lange, wie Sie es einstellen, zwischen einem Tag und zehn Jahren. Danach werden die Dokumente automatisch gelöscht.</p></details>
-    <details><summary>Lohnt sich das auch für eine kleine Praxis?</summary><p>Ja. Es gibt keine Mindestmenge und keine Vertragslaufzeit. Sie zahlen 9,90 € im Monat zzgl. MwSt. und dazu nur die Briefe, die Sie verschicken.</p></details>
+    <details><summary>Lohnt sich das auch für eine kleine Praxis?</summary><p>Ja. Es gibt keine Mindestmenge und keine Vertragslaufzeit. Sie zahlen 9,90&nbsp;€ im Monat zzgl.&nbsp;MwSt. und dazu nur die Briefe, die Sie verschicken.</p></details>
     <details><summary>Wird der Brief wirklich per Post zugestellt?</summary><p>Ja. Jeder Brief wird gedruckt, kuvertiert, frankiert und von der Deutschen Post zugestellt. Es ist kein E-Mail-Versand.</p></details>
   </div>
 </section>
@@ -986,9 +994,9 @@ nav{gap:1.5rem}
             <label for="cb-zeit">Wann darf ich anrufen?</label>
             <select id="cb-zeit">
               <option value="">Bitte wählen</option>
-              <option>Morgens (8–10 Uhr)</option>
-              <option>Vormittags (10–12 Uhr)</option>
-              <option>Nachmittags (13–16 Uhr)</option>
+              <option>Morgens (8–10&nbsp;Uhr)</option>
+              <option>Vormittags (10–12&nbsp;Uhr)</option>
+              <option>Nachmittags (13–16&nbsp;Uhr)</option>
               <option>Egal – einfach anrufen</option>
             </select>
           </div>
