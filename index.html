@@ -589,6 +589,39 @@ nav{gap:1.5rem}
   .nav-epostbox svg{height:18px}
 }
 @media(max-width:400px){.nav-logos{gap:.6rem}.nav-logos img{height:18px}.nav-div{height:18px}.nav-epostbox svg{height:16px}}
+
+/* ── KUNDENSTIMMEN (echte Google-Bewertungen, statisch, ohne Nachladen von Google) ── */
+.kst-sec{background:var(--epb-dark,#040912);padding:5rem 2.5rem;color:#fff}
+.kst-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.75rem}
+.kst-sec .sec-h{color:#fff;margin-bottom:0}
+.kst-score{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-card);padding:.875rem 1.25rem}
+.kst-score-n{font-size:2.25rem;font-weight:700;line-height:1;letter-spacing:-.02em}
+.kst-stars{color:#f5b400;letter-spacing:.12em;font-size:1rem;line-height:1}
+.kst-score-l{font-size:.8125rem;color:rgba(255,255,255,.6);margin-top:.3rem}
+.kst-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.kst-card{display:flex;flex-direction:column;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-card);padding:1.75rem;margin:0;transition:background .2s,border-color .2s}
+.kst-card:hover{background:rgba(255,255,255,.08);border-color:rgba(198,24,36,.5)}
+.kst-card .kst-stars{font-size:.875rem;margin-bottom:1rem}
+.kst-card blockquote{margin:0 0 1.25rem;font-size:.9375rem;line-height:1.6;color:rgba(255,255,255,.78);flex:1}
+.kst-card blockquote::before{content:"\201C";display:block;font-family:Georgia,serif;font-size:3rem;line-height:1;height:1.75rem;color:var(--red);font-weight:700;margin-bottom:.5rem}
+.kst-card figcaption{display:flex;align-items:center;gap:.75rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
+.kst-ini{width:2.25rem;height:2.25rem;min-width:2.25rem;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.875rem;font-weight:700}
+.kst-name{font-size:.9375rem;font-weight:700;color:#fff;line-height:1.2}
+.kst-src{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:.15rem}
+.kst-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.kst-note{font-size:.8125rem;color:rgba(255,255,255,.5)}
+.kst-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,.35);padding:.6rem 1.25rem;border-radius:var(--radius-pill);transition:border-color .2s,background .2s}
+.kst-link:hover{border-color:var(--red);background:var(--red)}
+.kst-link svg{width:14px;height:14px}
+@media(max-width:900px){.kst-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){
+  .kst-sec{padding:3.25rem 1.25rem}
+  .kst-head{align-items:flex-start;gap:1.25rem;margin-bottom:1.75rem}
+  .kst-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.875rem;margin:0 -1.25rem;padding:0 1.25rem .5rem;scrollbar-width:none}
+  .kst-grid::-webkit-scrollbar{display:none}
+  .kst-card{flex:0 0 84%;scroll-snap-align:center;padding:1.5rem}
+  .kst-foot{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
@@ -777,6 +810,63 @@ nav{gap:1.5rem}
         <h3>Optionaler Labelprinter – nur 4,90 € zzgl. MwSt. / Monat</h3>
         <p>Auf Wunsch erhalten Sie einen Labelprinter zum Drucken von <strong>Internetmarken (Briefmarken)</strong> und <strong>DHL-Versandlabeln</strong> – direkt aus der epostbox heraus. Ideal für Unternehmen mit gemischtem Versand.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- KUNDENSTIMMEN: echte Google-Bewertungen (Auszüge im Wortlaut), Stand 27.11.2026 -->
+<section class="kst-sec" id="kundenstimmen">
+  <div class="sec-in">
+    <div class="kst-head">
+      <div>
+        <div class="sec-tag">Kundenstimmen</div>
+        <h2 class="sec-h">Was unsere Kunden sagen</h2>
+      </div>
+      <div class="kst-score" aria-label="5,0 von 5 Sternen aus 59 Google-Bewertungen">
+        <span class="kst-score-n">5,0</span>
+        <div>
+          <div class="kst-stars" aria-hidden="true">★★★★★</div>
+          <div class="kst-score-l">59 Bewertungen auf Google</div>
+        </div>
+      </div>
+    </div>
+    <div class="kst-grid">
+      <figure class="kst-card">
+        <div class="kst-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+        <blockquote>Wir sind über eine Wartung auf die epostbox aufmerksam geworden. Nach einer top Beratung durch TE-Printline haben wir direkt umgestellt. Das Ergebnis: Eine echte Erleichterung für unser gesamtes Team! Der Start lief reibungslos und ohne Verzögerung.</blockquote>
+        <figcaption><span class="kst-ini" aria-hidden="true">M</span><div><div class="kst-name">Maren L.</div><div class="kst-src">Google-Bewertung</div></div></figcaption>
+      </figure>
+      <figure class="kst-card">
+        <div class="kst-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+        <blockquote>Durch die Umstellung auf die E-Postbox konnten wir nicht nur unsere internen Prozesse deutlich optimieren, sondern auch nachhaltig Kosten einsparen, da die Wartungskosten der Frankiermaschine entfallen.</blockquote>
+        <figcaption><span class="kst-ini" aria-hidden="true">M</span><div><div class="kst-name">Marco F.</div><div class="kst-src">Google-Bewertung</div></div></figcaption>
+      </figure>
+      <figure class="kst-card">
+        <div class="kst-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+        <blockquote>Wer sich also im Büro mit lästiger Briefverarbeitung noch händisch abquält, dem kann ich die epostbox wärmstens ans Herz legen, da man sich sehr viel Arbeit, Porto, das Büropapier, und Nerven spart.</blockquote>
+        <figcaption><span class="kst-ini" aria-hidden="true">J</span><div><div class="kst-name">Jessica B.</div><div class="kst-src">Google-Bewertung</div></div></figcaption>
+      </figure>
+      <figure class="kst-card">
+        <div class="kst-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+        <blockquote>Jetzt haben wir die TE-EPostbox und sind begeistert. Es ist leicht verständlich, sicher und sehr effizient. Bei Fragen stehen die Mitarbeiter immer zur Verfügung und es werden immer schnelle Lösungen gefunden.</blockquote>
+        <figcaption><span class="kst-ini" aria-hidden="true">A</span><div><div class="kst-name">Alexandra H.</div><div class="kst-src">Google-Bewertung</div></div></figcaption>
+      </figure>
+      <figure class="kst-card">
+        <div class="kst-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+        <blockquote>Die Implementierung war nahtlos, der Support reagiert prompt und kompetent, und die Benutzeroberfläche ist sehr einfach und benutzerfreundlich. Der Wechsel hat einige Arbeitsabläufe deutlich optimiert.</blockquote>
+        <figcaption><span class="kst-ini" aria-hidden="true">S</span><div><div class="kst-name">Simone H.</div><div class="kst-src">Google-Bewertung</div></div></figcaption>
+      </figure>
+      <figure class="kst-card">
+        <div class="kst-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+        <blockquote>TE-Printline ist absolut zu empfehlen, genau wie die epostbox. Super schneller Service und alles läuft problemlos. Top.</blockquote>
+        <figcaption><span class="kst-ini" aria-hidden="true">T</span><div><div class="kst-name">TSG 1862 Weinheim e.V.</div><div class="kst-src">Google-Bewertung</div></div></figcaption>
+      </figure>
+    </div>
+    <div class="kst-foot">
+      <span class="kst-note">Auszüge aus echten Google-Bewertungen, Stand November 2026.</span>
+      <a class="kst-link" href="https://www.google.com/maps?cid=16135470812967425915" target="_blank" rel="noopener">Alle Bewertungen auf Google lesen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      </a>
     </div>
   </div>
 </section>
