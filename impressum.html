@@ -413,6 +413,10 @@ footer a:hover{color:#fff}
 }
 
 
+
+/* Geschäftsführer-Kästen am Handy nicht breiter als der Bildschirm */
+.imp-cols>*{min-width:0}
+@media(max-width:680px){.imp-cols{grid-template-columns:1fr}.imp-content h2,h2{overflow-wrap:anywhere;hyphens:auto}}
 /* ── MENÜ (auf allen Seiten gleich) ── */
 nav{gap:1.5rem}
 .nav-logos{display:flex;align-items:center;gap:1.5rem;flex-shrink:0}
