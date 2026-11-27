@@ -586,11 +586,20 @@ nav{gap:1.5rem}
 .nav-cta,.nav-call{white-space:nowrap}
 .mobile-menu .m-active{color:var(--red);background:#fdf2f3;font-weight:700;box-shadow:inset 3px 0 0 var(--red)}
 @media(max-width:1180px){.nav-call{display:none}}
-@media(max-width:1020px){.nav-div,.nav-epostbox{display:none}}
-@media(max-width:900px){
-  .nav-div,.nav-epostbox,.nav-call,.nav-links,.nav-cta{display:none}
+@media(max-width:1180px) and (min-width:1021px){.nav-logos{gap:1rem}.nav-logos img{height:28px}.nav-epostbox svg{height:22px}}
+@media(max-width:1020px){
+  .nav-links,.nav-call,.nav-cta{display:none}
   .nav-burger{display:flex}
+  .nav-div,.nav-epostbox{display:block}
 }
+@media(max-width:680px){
+  .nav-logos{gap:.75rem}
+  .nav-logos img{height:20px}
+  .nav-div{display:block;height:20px}
+  .nav-epostbox{display:block}
+  .nav-epostbox svg{height:18px}
+}
+@media(max-width:400px){.nav-logos{gap:.6rem}.nav-logos img{height:18px}.nav-div{height:18px}.nav-epostbox svg{height:16px}}
 </style>
 </head>
 <body>
