@@ -597,19 +597,19 @@ nav{gap:1.5rem}
 .glance span{font-size:.8125rem;color:var(--text-faded);line-height:1.5;display:block}
 .anim-card{background:#fff;border:1.5px solid var(--gray-mid);border-radius:var(--radius-card);padding:2.25rem 1.75rem;margin-top:2.5rem;box-shadow:0 10px 40px rgba(0,0,0,.05)}
 /* Ablauf-Animation */
-.flow{--p:0;position:relative;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:1rem;list-style:none}
+.flow{position:relative;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:1rem;list-style:none}
 .flow::before,.flow::after{content:"";position:absolute;top:27px;left:calc(50% / var(--n));right:calc(50% / var(--n));height:3px;border-radius:3px;background:var(--gray-mid)}
-.flow::after{background:var(--red);transform:scaleX(var(--p));transform-origin:left;transition:transform .9s ease}
+.flow::after{background:var(--red);transform:scaleX(var(--p,0));transform-origin:left;transition:transform .9s ease}
 .flow li{position:relative;z-index:1;text-align:center;opacity:.5;transition:opacity .4s}
-.flow .fs-ic{width:56px;height:56px;margin:0 auto .9rem;border-radius:50%;background:#fff;border:2.5px solid var(--gray-mid);display:flex;align-items:center;justify-content:center;transition:all .4s}
-.flow .fs-ic svg{width:22px;height:22px;stroke:var(--gray)}
+.flow .fs-ic{width:56px;height:56px;margin:0 auto .9rem;border-radius:50%;background:#fff;border:2.5px solid var(--gray-mid);color:var(--gray);display:flex;align-items:center;justify-content:center;transition:background-color .4s,border-color .4s,color .4s,box-shadow .4s}
+.flow .fs-ic svg{width:22px;height:22px;stroke:currentColor;display:block}
 .flow h3{font-size:.9375rem;font-weight:700;margin-bottom:.3rem}
 .flow p{font-size:.8125rem;color:var(--text-faded);line-height:1.5}
 .flow li.done,.flow li.on{opacity:1}
 .flow li.done .fs-ic{border-color:var(--red)}
-.flow li.done .fs-ic svg{stroke:var(--red)}
-.flow li.on .fs-ic{background:var(--red);border-color:var(--red);transform:scale(1.12);box-shadow:0 0 0 8px rgba(198,24,36,.12)}
-.flow li.on .fs-ic svg{stroke:#fff}
+.flow li.done .fs-ic{color:var(--red)}
+.flow li.on .fs-ic{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 0 0 8px rgba(198,24,36,.12)}
+.flow li.on .fs-ic svg{stroke:currentColor}
 /* Serienbrief-Animation */
 .split{display:grid;grid-template-columns:minmax(0,220px) 60px minmax(0,1fr);align-items:center;gap:1rem}
 .split-doc{position:relative;height:230px}
@@ -653,7 +653,7 @@ nav{gap:1.5rem}
 @media(max-width:760px){
   .flow{grid-template-columns:1fr;gap:1.1rem}
   .flow::before,.flow::after{top:28px;bottom:28px;left:27px;right:auto;width:3px;height:auto}
-  .flow::after{transform:scaleY(var(--p));transform-origin:top}
+  .flow::after{transform:scaleY(var(--p,0));transform-origin:top}
   .flow li{display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:1rem;text-align:left;align-items:center}
   .flow .fs-ic{margin:0;grid-row:span 2}
   .flow h3{align-self:end;margin:0}
@@ -794,10 +794,10 @@ nav{gap:1.5rem}
     </div>
     <div class="anim-card">
     <ol class="flow" data-anim style="--n:4">
-      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div><h3>Datei übergeben</h3><p>Aus Ihrer Verwaltungssoftware oder als PDF.</p></li>
-      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>Nach Mieter trennen</h3><p>Nach Adresse, Seitenzahl oder Stichwort.</p></li>
-      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div><h3>Druck und Umschlag</h3><p>Jede Abrechnung einzeln kuvertiert.</p></li>
-      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><h3>Zustellung</h3><p>Die Deutsche Post bringt alle Briefe.</p></li>
+      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div><h3>Datei übergeben</h3><p>Aus Ihrer Verwaltungssoftware oder als PDF.</p></li>
+      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>Nach Mieter trennen</h3><p>Nach Adresse, Seitenzahl oder Stichwort.</p></li>
+      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div><h3>Druck und Umschlag</h3><p>Jede Abrechnung einzeln kuvertiert.</p></li>
+      <li data-s><div class="fs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><h3>Zustellung</h3><p>Die Deutsche Post bringt alle Briefe.</p></li>
     </ol>
     </div>
   </div>
@@ -809,32 +809,32 @@ nav{gap:1.5rem}
     <h2 class="sec-h">Was Hausverwaltungen verschicken</h2>
     <div class="werte-grid">
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg></div>
         <h3>Nebenkostenabrechnungen</h3>
         <p>Betriebskostenabrechnungen für alle Mieter einer Anlage in einem Schritt.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <h3>Hausgeldabrechnungen</h3>
         <p>Jahresabrechnungen und Wirtschaftspläne für Eigentümer.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <h3>Einladungen</h3>
         <p>Einladungen zur Eigentümerversammlung mit Tagesordnung als Anlage.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
         <h3>Mieterhöhungen und Kündigungen</h3>
         <p>Wichtige Schreiben auf Wunsch als <a href="einschreiben-online-versenden.html" style="color:var(--red)">Einschreiben</a>.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <h3>Mahnungen</h3>
         <p>Zahlungserinnerungen und Mahnungen, ohne auf den nächsten Postgang zu warten.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3>Rundschreiben</h3>
         <p>Handwerkertermine, Ablesetermine oder Hinweise an alle Mieter eines Hauses.</p>
       </div>
@@ -848,22 +848,22 @@ nav{gap:1.5rem}
     <h2 class="sec-h">Was die epostbox für Verwaltungen mitbringt</h2>
     <div class="werte-grid g4">
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
         <h3>Unterschiedlich lange Abrechnungen</h3>
         <p>Trennen Sie nach Empfängeradresse oder nach einem Stichwort auf der ersten Seite. Dann ist die Seitenzahl egal.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <h3>Briefpapier und Anlagen</h3>
         <p>Ihr Briefpapier liegt in der epostbox. Anlagen wie die Hausordnung fügen Sie einfach bei.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg></div>
         <h3>Kosten je Objekt</h3>
         <p>Mit Kostenstellen ordnen Sie den Versand einzelnen Objekten oder Eigentümergemeinschaften zu.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <h3>Versand zum Termin</h3>
         <p>Briefe sofort verschicken oder für einen bestimmten Tag einplanen.</p>
       </div>
@@ -877,17 +877,17 @@ nav{gap:1.5rem}
     <h2 class="sec-h">Warum über TE Printline?</h2>
     <div class="werte-grid">
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3>Persönliche Einrichtung</h3>
         <p>Wir richten die epostbox mit Ihnen ein, hinterlegen Briefpapier und Absender und zeigen Ihrem Team, wie der Versand aus den gewohnten Programmen funktioniert.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <h3>Ein fester Ansprechpartner</h3>
         <p>Bei Fragen rufen Sie bei uns in Viernheim an und landen nicht in einer Hotline. Wir kennen Ihre Einrichtung und helfen direkt.</p>
       </div>
       <div class="wert">
-        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
         <h3>Konditionen für größere Mengen</h3>
         <p>Wer regelmäßig viele Briefe verschickt, bekommt bei uns individuelle Konditionen. Sprechen Sie uns auf Ihre Versandmenge an.</p>
       </div>
@@ -1220,23 +1220,31 @@ function submitNachricht(e) {
 })();
 </script>
 <script>
-/* Kleine Ablauf-Animationen: Schritte leuchten nacheinander auf, sobald sie sichtbar sind */
+/* Ablauf-Animationen: alle Elemente mit gleicher Schrittnummer leuchten gleichzeitig auf (z. B. Ablauf und Beispiel-Sendung) */
 (function(){
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('[data-anim]').forEach(function(box){
-    var steps = box.querySelectorAll('[data-s]'), n = steps.length, i = -1;
+    var els = Array.prototype.slice.call(box.querySelectorAll('[data-s]')), n = 0;
+    els.forEach(function(el){
+      var v = el.getAttribute('data-s');
+      el._k = v === '' ? Array.prototype.indexOf.call(el.parentNode.querySelectorAll(':scope > [data-s]'), el) : parseInt(v,10);
+      n = Math.max(n, el._k + 1);
+    });
+    var bars = box.matches('.flow') ? [box] : Array.prototype.slice.call(box.querySelectorAll('.flow'));
     function show(k){
-      steps.forEach(function(s,j){ s.classList.toggle('done', j<k); s.classList.toggle('on', j===k); });
-      box.style.setProperty('--p', n>1 ? Math.max(0,Math.min(k,n-1))/(n-1) : 1);
+      els.forEach(function(el){ el.classList.toggle('done', el._k < k); el.classList.toggle('on', el._k === k); });
+      var p = n > 1 ? Math.max(0, Math.min(k, n-1)) / (n-1) : 1;
+      bars.forEach(function(b){ b.style.setProperty('--p', p); });
     }
-    if(still || !('IntersectionObserver' in window)){ steps.forEach(function(s){s.classList.add('done')}); box.style.setProperty('--p',1); return; }
+    if(still || !('IntersectionObserver' in window)){ show(n); return; }
+    var i = -1;
     function tick(){
       i++;
-      if(i>n){ i=-1; show(-1); setTimeout(tick,700); return; }
-      if(i===n){ show(n); setTimeout(tick,2600); return; }
-      show(i); setTimeout(tick,1300);
+      if(i > n){ i = -1; show(-1); setTimeout(tick, 700); return; }
+      if(i === n){ show(n); setTimeout(tick, 2600); return; }
+      show(i); setTimeout(tick, 1500);
     }
-    new IntersectionObserver(function(es,o){ if(es[0].isIntersecting){ o.disconnect(); tick(); } },{threshold:.35}).observe(box);
+    new IntersectionObserver(function(es,o){ if(es[0].isIntersecting){ o.disconnect(); tick(); } },{threshold:.3}).observe(box);
   });
 })();
 </script>
