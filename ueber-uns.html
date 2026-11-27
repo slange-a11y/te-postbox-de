@@ -423,6 +423,12 @@ footer a:hover{color:#fff}
 .ferror .ferror-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
 .ferror .ferror-actions a{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:var(--radius-pill);font-weight:700;font-size:.875rem;text-decoration:none;border:1.5px solid var(--red);color:var(--red);background:#fff}
 .ferror .ferror-actions a.primary{background:var(--red);color:#fff}
+
+/* Menü mit fünf Punkten: auf mittleren Breiten Platz schaffen */
+.nav-link,.nav-cta{white-space:nowrap}
+@media(max-width:1180px) and (min-width:901px){.nav-call{display:none}}
+@media(max-width:1120px) and (min-width:901px){.nav-div,.nav-epostbox{display:none}}
+@media(max-width:980px) and (min-width:901px){.nav-link{padding-left:.6rem;padding-right:.6rem}}
 </style>
 </head>
 <body>
@@ -447,6 +453,7 @@ footer a:hover{color:#fff}
   </div>
     <div class="nav-links">
       <a href="index.html" class="nav-link">epostbox</a>
+      <a href="frankiermaschine-alternative.html" class="nav-link">Statt Frankiermaschine</a>
       <a href="ueber-uns.html" class="nav-link active">Über uns</a>
       <a href="faq.html" class="nav-link">FAQ</a>
     </div>
@@ -468,6 +475,7 @@ footer a:hover{color:#fff}
 
 <div class="mobile-menu" id="mobileMenu">
     <a href="index.html" class="">epostbox</a>
+    <a href="frankiermaschine-alternative.html" class="">Statt Frankiermaschine</a>
     <a href="ueber-uns.html" class="m-active">Über uns</a>
     <a href="faq.html" class="">FAQ</a>
   <hr>
