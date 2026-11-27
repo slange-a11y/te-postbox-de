@@ -18,6 +18,13 @@
 - [Startseite](https://www.te-postbox.de/): Ablauf, Vorteile, Preise, Kontaktformular
 - [Häufige Fragen](https://www.te-postbox.de/faq.html): 39 Fragen zu Kosten, Hybridpost, Versand, Sicherheit und Anbindung
 - [Alternative zur Frankiermaschine](https://www.te-postbox.de/frankiermaschine-alternative.html): wann sich der Wechsel lohnt, welche Kosten wegfallen, was mit Leasing-, Hersteller-, Post- und Wartungsvertrag passiert
+- [Einschreiben online versenden](https://www.te-postbox.de/einschreiben-online-versenden.html): Einwurf-Einschreiben, Übergabe-Einschreiben und Einschreiben mit Rückschein vom Computer aus, Ablauf und Sendungsverfolgung
+- [Serienbriefe und Rechnungen](https://www.te-postbox.de/serienbriefe-rechnungen-versenden.html): eine Datei hochladen, automatische Trennung nach Empfänger, Seitenzahl oder Stichwort, SFTP und REST-API
+- [Städte und Gemeinden](https://www.te-postbox.de/hybridpost-kommunen.html): Bescheide und Postzustellungsaufträge, 4-Augen-Freigabe, Anbindung an regisafe, WiNOWiG und CC e-gov
+- [Praxen, Kliniken und Pflege](https://www.te-postbox.de/hybridpost-arztpraxen-kliniken.html): Arztbriefe, Befunde und Rechnungen verschlüsselt versenden, AV-Vertrag, Verarbeitung in Deutschland
+- [Hausverwaltungen](https://www.te-postbox.de/hybridpost-hausverwaltung.html): Nebenkosten- und Hausgeldabrechnungen für ganze Wohnanlagen, Einladungen, Einschreiben
+- [Schornsteinfeger](https://www.te-postbox.de/hybridpost-schornsteinfeger.html): Feuerstättenbescheide, Terminankündigungen und Rechnungen ohne eigenen Drucker
+- [Datensicherheit](https://www.te-postbox.de/datensicherheit.html): Zwei-Faktor-Anmeldung, Rechte und Freigabe, TLS 1.3, Server und Druck in Deutschland, ISO 27001, AV-Vertrag, Löschfristen
 - [Über uns](https://www.te-postbox.de/ueber-uns.html): TE Printline GmbH, Team und Kontaktwege
 
 ## Kontakt

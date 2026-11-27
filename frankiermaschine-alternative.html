@@ -633,6 +633,27 @@ nav{gap:1.5rem}
   .kst-card{flex:0 0 84%;scroll-snap-align:center;padding:1.5rem}
   .kst-foot{flex-direction:column;align-items:flex-start}
 }
+
+/* ── MENÜ: Lösungen ── */
+.nav-dd{position:relative}
+.nav-dd>.nav-link{border:0;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;line-height:inherit;height:auto}
+@media(max-width:1340px){.nav-call{display:none}}
+@media(max-width:1180px) and (min-width:1021px){.nav-links{gap:0}.nav-link{padding:.5rem .65rem;font-size:.9rem}.nav-link.active::after{left:.65rem;right:.65rem}}
+.nav-dd .dd-caret{transition:transform .2s}
+.nav-dd.open .dd-caret,.nav-dd:hover .dd-caret{transform:rotate(180deg)}
+.nav-dd-menu{position:absolute;top:calc(100% + .75rem);left:50%;min-width:270px;background:#fff;border:1.5px solid var(--gray-mid);border-radius:1rem;box-shadow:0 16px 40px rgba(0,0,0,.12);padding:.45rem;opacity:0;visibility:hidden;transform:translate(-50%,6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:1000}
+.nav-dd-menu::before{content:"";position:absolute;left:0;right:0;top:-.9rem;height:.9rem}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu,.nav-dd.open .nav-dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav-dd-menu a{display:block;padding:.6rem .85rem;border-radius:.6rem;font-size:.9rem;font-weight:600;color:var(--text-mid);white-space:nowrap}
+.nav-dd-menu a:hover{background:var(--gray-light);color:var(--red)}
+.nav-dd-menu a.cur{color:var(--red);background:#fdf2f3;font-weight:700}
+.mobile-menu .m-group{padding:.75rem 1rem .25rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded)}
+.mobile-menu a.m-sub{padding:.55rem 1rem .55rem 1.75rem;font-size:.9375rem}
+.mobile-menu{max-height:calc(100vh - 4rem);overflow-y:auto}
+
+/* Bild */
+.pic{max-width:960px;margin:2.75rem auto 0}
+.pic img{width:100%;height:auto;border-radius:var(--radius-card);border:1.5px solid var(--gray-mid);background:#f6f4f7}
 </style>
 </head>
 <body>
@@ -658,6 +679,18 @@ nav{gap:1.5rem}
   <div class="nav-links">
     <a href="index.html" class="nav-link">Start</a>
     <a href="frankiermaschine-alternative.html" class="nav-link active" aria-current="page">Umstieg</a>
+    <div class="nav-dd">
+      <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">Lösungen <svg class="dd-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="nav-dd-menu">
+        <a href="einschreiben-online-versenden.html">Einschreiben online</a>
+        <a href="serienbriefe-rechnungen-versenden.html">Serienbriefe und Rechnungen</a>
+        <a href="hybridpost-kommunen.html">Städte und Gemeinden</a>
+        <a href="hybridpost-arztpraxen-kliniken.html">Praxen, Kliniken und Pflege</a>
+        <a href="hybridpost-hausverwaltung.html">Hausverwaltungen</a>
+        <a href="hybridpost-schornsteinfeger.html">Schornsteinfeger</a>
+        <a href="datensicherheit.html">Datensicherheit</a>
+      </div>
+    </div>
     <a href="faq.html" class="nav-link">FAQ</a>
     <a href="ueber-uns.html" class="nav-link">Über uns</a>
   </div>
@@ -679,6 +712,14 @@ nav{gap:1.5rem}
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Start</a>
   <a href="frankiermaschine-alternative.html" class="m-active" aria-current="page">Umstieg</a>
+  <div class="m-group">Lösungen</div>
+  <a href="einschreiben-online-versenden.html" class="m-sub">Einschreiben online</a>
+  <a href="serienbriefe-rechnungen-versenden.html" class="m-sub">Serienbriefe und Rechnungen</a>
+  <a href="hybridpost-kommunen.html" class="m-sub">Städte und Gemeinden</a>
+  <a href="hybridpost-arztpraxen-kliniken.html" class="m-sub">Praxen, Kliniken und Pflege</a>
+  <a href="hybridpost-hausverwaltung.html" class="m-sub">Hausverwaltungen</a>
+  <a href="hybridpost-schornsteinfeger.html" class="m-sub">Schornsteinfeger</a>
+  <a href="datensicherheit.html" class="m-sub">Datensicherheit</a>
   <a href="faq.html">FAQ</a>
   <a href="ueber-uns.html">Über uns</a>
   <hr>
@@ -711,6 +752,7 @@ nav{gap:1.5rem}
     <div class="sec-tag">Wann sich der Wechsel lohnt</div>
     <h2 class="sec-h">Sechs typische Anlässe</h2>
     <p class="sec-sub">Wenn einer dieser Punkte auf Sie zutrifft, lohnt es sich, die Frankiermaschine mit der epostbox zu vergleichen.</p>
+    <figure class="pic"><img src="img/bilder/bild-umstieg-1600.webp" srcset="img/bilder/bild-umstieg-800.webp 800w, img/bilder/bild-umstieg-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px" width="1600" height="900" alt="Illustration: Aufgeräumter Schreibtisch ohne Frankiermaschine, vom Laptop gehen Briefe direkt in den Versand" loading="lazy" decoding="async"></figure>
     <div class="werte-grid">
       <div class="wert">
         <div class="wert-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -1193,6 +1235,16 @@ function submitNachricht(e) {
       m.classList.remove('open');
     }
   });
+})();
+</script>
+<script>
+/* Menü „Lösungen“: per Klick öffnen (Touch), Escape und Klick daneben schließen */
+(function(){
+  var dd=document.querySelector('.nav-dd'); if(!dd) return;
+  var btn=dd.querySelector('button');
+  btn.addEventListener('click',function(e){e.stopPropagation();var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
 })();
 </script>
 </body>
