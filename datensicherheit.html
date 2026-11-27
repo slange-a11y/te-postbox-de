@@ -19,14 +19,14 @@
 <meta property="og:title" content="Datensicherheit bei der epostbox | TE Printline">
 <meta property="og:description" content="So schützt die epostbox Ihre Briefe: Zwei-Faktor-Anmeldung, Rechte und 4-Augen-Freigabe, TLS 1.3, Server und Druck nur in Deutschland, ISO 27001, Löschung nach Frist.">
 <meta property="og:url" content="https://www.te-postbox.de/datensicherheit.html">
-<meta property="og:image" content="https://www.te-postbox.de/img/og-image.png">
+<meta property="og:image" content="https://www.te-postbox.de/img/bilder/bild-datensicherheit-og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="TE Printline und epostbox: Briefe digital versenden">
+<meta property="og:image:alt" content="Illustration: Ein Brief umgeben von Schutzringen mit Schloss, Schlüssel, Schild, Personen und Uhr, darunter Deutschland">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.te-postbox.de/img/og-image.png">
+<meta name="twitter:image" content="https://www.te-postbox.de/img/bilder/bild-datensicherheit-og.jpg">
 <meta name="twitter:title" content="Datensicherheit bei der epostbox | TE Printline">
 <meta name="twitter:description" content="So schützt die epostbox Ihre Briefe: Zwei-Faktor-Anmeldung, Rechte und 4-Augen-Freigabe, TLS 1.3, Server und Druck nur in Deutschland, ISO 27001, Löschung nach Frist.">
 
@@ -576,7 +576,26 @@ nav{gap:1.5rem}
   .kst-foot{flex-direction:column;align-items:flex-start}
 }
 
+/* ── MENÜ: Lösungen ── */
+.nav-dd{position:relative}
+.nav-dd>.nav-link{border:0;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;line-height:inherit;height:auto}
+@media(max-width:1340px){.nav-call{display:none}}
+@media(max-width:1180px) and (min-width:1021px){.nav-links{gap:0}.nav-link{padding:.5rem .65rem;font-size:.9rem}.nav-link.active::after{left:.65rem;right:.65rem}}
+.nav-dd .dd-caret{transition:transform .2s}
+.nav-dd.open .dd-caret,.nav-dd:hover .dd-caret{transform:rotate(180deg)}
+.nav-dd-menu{position:absolute;top:calc(100% + .75rem);left:50%;min-width:270px;background:#fff;border:1.5px solid var(--gray-mid);border-radius:1rem;box-shadow:0 16px 40px rgba(0,0,0,.12);padding:.45rem;opacity:0;visibility:hidden;transform:translate(-50%,6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:1000}
+.nav-dd-menu::before{content:"";position:absolute;left:0;right:0;top:-.9rem;height:.9rem}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu,.nav-dd.open .nav-dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav-dd-menu a{display:block;padding:.6rem .85rem;border-radius:.6rem;font-size:.9rem;font-weight:600;color:var(--text-mid);white-space:nowrap}
+.nav-dd-menu a:hover{background:var(--gray-light);color:var(--red)}
+.nav-dd-menu a.cur{color:var(--red);background:#fdf2f3;font-weight:700}
+.mobile-menu .m-group{padding:.75rem 1rem .25rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded)}
+.mobile-menu a.m-sub{padding:.55rem 1rem .55rem 1.75rem;font-size:.9375rem}
+.mobile-menu{max-height:calc(100vh - 4rem);overflow-y:auto}
+
 /* ── THEMENSEITEN ── */
+.pic{max-width:960px;margin:2.25rem auto 0}
+.pic img{width:100%;height:auto;border-radius:var(--radius-card);border:1.5px solid var(--gray-mid);background:#f6f4f7}
 .tldr{max-width:760px;margin:-2.25rem auto 0;position:relative;background:#fff;border:1.5px solid var(--gray-mid);border-left:4px solid var(--red);border-radius:1rem;padding:1.25rem 1.5rem;box-shadow:0 8px 30px rgba(0,0,0,.06);font-size:.9688rem;line-height:1.65;color:var(--text-mid)}
 .tldr strong{color:var(--text)}
 .tldr-wrap{padding:0 1.25rem}
@@ -655,23 +674,6 @@ nav{gap:1.5rem}
 }
 @media(max-width:680px){.glance,.topics{grid-template-columns:1fr}.tldr{margin-top:-1.5rem}.hero h1{font-size:clamp(1.75rem,8.2vw,2.25rem);hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
 @media(prefers-reduced-motion:reduce){.flow::after,.flow li,.flow .fs-ic,.split-env li,.track li{transition:none}.split-arrow svg{animation:none}}
-
-/* ── MENÜ: Lösungen ── */
-.nav-dd{position:relative}
-.nav-dd>.nav-link{border:0;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;line-height:inherit;height:auto}
-@media(max-width:1340px){.nav-call{display:none}}
-@media(max-width:1180px) and (min-width:1021px){.nav-links{gap:0}.nav-link{padding:.5rem .65rem;font-size:.9rem}.nav-link.active::after{left:.65rem;right:.65rem}}
-.nav-dd .dd-caret{transition:transform .2s}
-.nav-dd.open .dd-caret,.nav-dd:hover .dd-caret{transform:rotate(180deg)}
-.nav-dd-menu{position:absolute;top:calc(100% + .75rem);left:50%;min-width:270px;background:#fff;border:1.5px solid var(--gray-mid);border-radius:1rem;box-shadow:0 16px 40px rgba(0,0,0,.12);padding:.45rem;opacity:0;visibility:hidden;transform:translate(-50%,6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:1000}
-.nav-dd-menu::before{content:"";position:absolute;left:0;right:0;top:-.9rem;height:.9rem}
-.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu,.nav-dd.open .nav-dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.nav-dd-menu a{display:block;padding:.6rem .85rem;border-radius:.6rem;font-size:.9rem;font-weight:600;color:var(--text-mid);white-space:nowrap}
-.nav-dd-menu a:hover{background:var(--gray-light);color:var(--red)}
-.nav-dd-menu a.cur{color:var(--red);background:#fdf2f3;font-weight:700}
-.mobile-menu .m-group{padding:.75rem 1rem .25rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded)}
-.mobile-menu a.m-sub{padding:.55rem 1rem .55rem 1.75rem;font-size:.9375rem}
-.mobile-menu{max-height:calc(100vh - 4rem);overflow-y:auto}
 </style>
 </head>
 <body>
@@ -770,6 +772,7 @@ nav{gap:1.5rem}
     <div class="sec-tag">Auf einen Blick</div>
     <h2 class="sec-h">Sicherheit auf jeder Station.</h2>
     <p class="fa-lead">Ein Brief durchläuft mehrere Stationen, bevor er im Briefkasten liegt. Für jede gibt es eigene Schutzmaßnahmen.</p>
+    <figure class="pic"><img src="img/bilder/bild-datensicherheit-1600.webp" srcset="img/bilder/bild-datensicherheit-800.webp 800w, img/bilder/bild-datensicherheit-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px" width="1600" height="900" alt="Illustration: Ein Brief umgeben von Schutzringen mit Schloss, Schlüssel, Schild, Personen und Uhr, darunter Deutschland" loading="lazy" decoding="async"></figure>
     <div class="glance">
       <div><b>TLS 1.3</b><span>Verschlüsselte Übertragung.</span></div>
       <div><b>Nur Deutschland</b><span>Server und Druckstandorte.</span></div>
@@ -1203,6 +1206,16 @@ function submitNachricht(e) {
 })();
 </script>
 <script>
+/* Menü „Lösungen“: per Klick öffnen (Touch), Escape und Klick daneben schließen */
+(function(){
+  var dd=document.querySelector('.nav-dd'); if(!dd) return;
+  var btn=dd.querySelector('button');
+  btn.addEventListener('click',function(e){e.stopPropagation();var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+})();
+</script>
+<script>
 /* Kleine Ablauf-Animationen: Schritte leuchten nacheinander auf, sobald sie sichtbar sind */
 (function(){
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1221,16 +1234,6 @@ function submitNachricht(e) {
     }
     new IntersectionObserver(function(es,o){ if(es[0].isIntersecting){ o.disconnect(); tick(); } },{threshold:.35}).observe(box);
   });
-})();
-</script>
-<script>
-/* Menü „Lösungen“: per Klick öffnen (Touch), Escape und Klick daneben schließen */
-(function(){
-  var dd=document.querySelector('.nav-dd'); if(!dd) return;
-  var btn=dd.querySelector('button');
-  btn.addEventListener('click',function(e){e.stopPropagation();var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
 })();
 </script>
 </body>
