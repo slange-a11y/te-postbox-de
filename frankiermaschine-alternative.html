@@ -572,11 +572,34 @@ footer a:hover{color:#fff}
   .fa-table th{font-size:.6875rem;letter-spacing:.02em}
 }
 
-/* Menü mit fünf Punkten: auf mittleren Breiten Platz schaffen */
-.nav-link,.nav-cta{white-space:nowrap}
-@media(max-width:1180px) and (min-width:901px){.nav-call{display:none}}
-@media(max-width:1120px) and (min-width:901px){.nav-div,.nav-epostbox{display:none}}
-@media(max-width:980px) and (min-width:901px){.nav-link{padding-left:.6rem;padding-right:.6rem}}
+
+/* ── MENÜ (auf allen Seiten gleich) ── */
+nav{gap:1.5rem}
+.nav-logos{display:flex;align-items:center;gap:1.5rem;flex-shrink:0}
+.nav-logos img{height:32px;width:auto}
+.nav-links{display:flex;align-items:center;gap:.25rem;margin:0 auto}
+.nav-link{position:relative;white-space:nowrap;font-size:.9375rem;font-weight:600;color:var(--text-mid);padding:.5rem .95rem;border-radius:var(--radius-pill);background:transparent}
+.nav-link:hover{color:var(--red);background:var(--gray-light)}
+.nav-link.active{color:var(--red);background:#fdf2f3;font-weight:700}
+.nav-link.active::after{content:"";position:absolute;left:.95rem;right:.95rem;bottom:-.95rem;height:3px;border-radius:3px 3px 0 0;background:var(--red)}
+.nav-right{flex-shrink:0}
+.nav-cta,.nav-call{white-space:nowrap}
+.mobile-menu .m-active{color:var(--red);background:#fdf2f3;font-weight:700;box-shadow:inset 3px 0 0 var(--red)}
+@media(max-width:1180px){.nav-call{display:none}}
+@media(max-width:1180px) and (min-width:1021px){.nav-logos{gap:1rem}.nav-logos img{height:28px}.nav-epostbox svg{height:22px}}
+@media(max-width:1020px){
+  .nav-links,.nav-call,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .nav-div,.nav-epostbox{display:block}
+}
+@media(max-width:680px){
+  .nav-logos{gap:.75rem}
+  .nav-logos img{height:20px}
+  .nav-div{display:block;height:20px}
+  .nav-epostbox{display:block}
+  .nav-epostbox svg{height:18px}
+}
+@media(max-width:400px){.nav-logos{gap:.6rem}.nav-logos img{height:18px}.nav-div{height:18px}.nav-epostbox svg{height:16px}}
 </style>
 </head>
 <body>
@@ -589,22 +612,21 @@ footer a:hover{color:#fff}
 </a>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-logos">
+<nav aria-label="Hauptmenü">
+  <a href="index.html" class="nav-logos" aria-label="Zur Startseite">
     <img src="/img/logo-te-printline.png" width="877" height="101" alt="TE Printline GmbH">
-    <div class="nav-div"></div>
-    <div class="nav-epostbox">
+    <span class="nav-div"></span>
+    <span class="nav-epostbox">
       <svg viewBox="0 0 287 62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.242188 31.9161C0.242188 21.3302 7.41257 13.0967 17.8854 13.0967C29.3761 13.0967 35.5286 21.8731 35.5286 34.6305H9.58404C10.2852 40.127 13.3389 43.5425 18.7223 43.5425C22.4093 43.5425 24.5808 41.8687 25.6213 39.1543H34.9631C33.6286 45.4878 27.9963 50.8712 18.7902 50.8712C6.93756 50.8939 0.242188 42.5925 0.242188 31.9161ZM9.71976 28.0934H25.6213C25.3498 23.5695 22.3414 20.4254 18.0211 20.4254C12.9996 20.4254 10.5567 23.4338 9.71976 28.0934ZM39.8942 14.0693H49.0324V18.5254H49.236C51.5432 15.3813 54.8909 13.0967 59.7541 13.0967C69.2317 13.0967 75.2937 20.8326 75.2937 31.984C75.2937 43.1354 69.0281 50.8712 59.822 50.8712C54.8004 50.8712 51.5206 48.8581 49.5075 45.7819H49.3717V61.525H39.8942V14.0693ZM65.6804 32.278C65.6804 25.5148 63.3054 20.7873 57.4469 20.7873C51.5885 20.7873 49.1455 25.8767 49.1455 32.278C49.1455 38.6793 52.1539 42.9997 57.7862 42.9997C62.6042 42.9997 65.6578 39.0186 65.6578 32.278H65.6804ZM77.9402 31.984C77.9402 21.3302 85.5403 13.0967 96.6239 13.0967C107.707 13.0967 115.308 21.3302 115.308 31.984C115.308 42.6378 107.707 50.8712 96.6239 50.8712C85.5403 50.8712 77.9402 42.6378 77.9402 31.984ZM105.694 31.984C105.694 25.0172 102.414 20.2671 96.6239 20.2671C90.8333 20.2671 87.5535 25.0172 87.5535 31.984C87.5535 38.9508 90.7654 43.633 96.6239 43.633C102.482 43.633 105.694 38.9734 105.694 31.984ZM117.456 38.2722H126.233C126.866 42.3889 129.784 44.1985 134.037 44.1985C138.289 44.1985 140.596 42.5925 140.596 40.0817C140.596 36.6662 136.072 36.3269 131.186 35.3317C124.785 34.0876 118.497 32.3233 118.497 24.5195C118.497 16.7158 124.921 13.0967 133.064 13.0967C142.474 13.0967 147.699 17.7563 148.4 24.9493H139.827C139.42 21.1266 136.977 19.7242 132.928 19.7242C129.241 19.7242 126.798 21.1266 126.798 23.7052C126.798 26.7815 131.548 27.0529 136.615 28.0934C142.609 29.3375 149.237 31.0113 149.237 39.3805C149.237 46.5509 143.107 50.8712 134.172 50.8712C123.79 50.8712 117.999 45.8497 117.434 38.2496L117.456 38.2722ZM150.775 14.0693H155.729V2.91792H165.003V14.0693H171.133V20.3349H165.003V39.2901C165.003 41.9366 166.473 42.8413 168.554 42.8413C169.73 42.8413 171.336 42.7735 171.336 42.7735V49.7403C171.336 49.7403 169.165 49.876 165.41 49.876C160.818 49.876 155.729 48.0664 155.729 41.3032V20.3123H150.775V14.0693ZM185.27 45.3747H185.134V49.8308H175.996V0H185.473V18.4123H185.677C187.622 15.4039 190.698 13.1193 195.652 13.1193C204.655 13.1193 211.056 20.8552 211.056 32.0066C211.056 43.158 204.926 50.8939 195.923 50.8939C190.902 50.8939 187.351 48.7224 185.27 45.3973V45.3747ZM201.443 31.984C201.443 25.3565 198.796 20.7647 193.503 20.7647C187.509 20.7647 185.27 25.5827 185.27 32.1875C185.27 38.7924 188.55 42.9318 193.842 42.9318C198.728 42.9318 201.443 38.8829 201.443 31.984ZM213.702 31.984C213.702 21.3302 221.303 13.0967 232.386 13.0967C243.47 13.0967 251.07 21.3302 251.07 31.984C251.07 42.6378 243.47 50.8712 232.386 50.8712C221.303 50.8712 213.702 42.6378 213.702 31.984ZM241.434 31.984C241.434 25.0172 238.154 20.2671 232.364 20.2671C226.573 20.2671 223.293 25.0172 223.293 31.984C223.293 38.9508 226.505 43.633 232.364 43.633C238.222 43.633 241.434 38.9734 241.434 31.984ZM263.239 30.8756L251.59 14.0693H262.402L268.736 24.316H268.871L274.866 14.0693H284.705L273.621 30.8078L286.379 49.8308H275.092L268.464 37.9781H268.328L260.593 49.8308H250.21L263.239 30.8756Z" fill="#353233"/>
       </svg>
-    </div>
-  </div>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link">epostbox</a>
-      <a href="frankiermaschine-alternative.html" class="nav-link active">Statt Frankiermaschine</a>
-      <a href="ueber-uns.html" class="nav-link">Über uns</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-    </div>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Start</a>
+    <a href="frankiermaschine-alternative.html" class="nav-link active" aria-current="page">Umstieg</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="ueber-uns.html" class="nav-link">Über uns</a>
   </div>
   <div class="nav-right">
     <a href="tel:0620496220" class="nav-call">
@@ -622,10 +644,10 @@ footer a:hover{color:#fff}
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="">epostbox</a>
-    <a href="frankiermaschine-alternative.html" class="m-active">Statt Frankiermaschine</a>
-    <a href="ueber-uns.html" class="">Über uns</a>
-    <a href="faq.html" class="">FAQ</a>
+  <a href="index.html">Start</a>
+  <a href="frankiermaschine-alternative.html" class="m-active" aria-current="page">Umstieg</a>
+  <a href="faq.html">FAQ</a>
+  <a href="ueber-uns.html">Über uns</a>
   <hr>
   <a href="tel:0620496220">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
