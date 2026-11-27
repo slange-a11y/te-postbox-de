@@ -550,6 +550,18 @@ footer a:hover{color:#fff}
 .ferror .ferror-actions a.primary{background:var(--red);color:#fff}
 
 
+
+/* Kästen "Wer wir sind" und "Große Versandmengen" am Handy nicht breiter als der Bildschirm */
+.ueber-in>*{min-width:0}
+.ueber-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:680px){
+  .ueber-sec{padding:3.25rem 1.25rem}
+  .ueber-card{padding:1.5rem}
+  .ufact-n{font-size:1.125rem}
+  .ufact-l{font-size:.6875rem;letter-spacing:.02em}
+  .epb-vol-in{grid-template-columns:1fr;gap:1.5rem}
+  .epb-vol-actions{min-width:0;white-space:normal}
+}
 /* ── MENÜ (auf allen Seiten gleich) ── */
 nav{gap:1.5rem}
 .nav-logos{display:flex;align-items:center;gap:1.5rem;flex-shrink:0}
